@@ -11,9 +11,14 @@ kubectl version
 printf "\n\n"
 kubectl cluster-info
 
-# show all existing resources
+# show all existing resources in kube-system
 printf "\n\n"
+kubens kube-system
 kubectl get all
+
+# show all existing namespaces
+printf "\n\n"
+kubens
 
 
 printf "\n\n"
