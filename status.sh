@@ -7,6 +7,10 @@ kubectl config current-context
 printf "\n\n"
 kubectl version
 
+# view cluster info
+printf "\n\n"
+kubectl cluster-info
+
 # show all existing resources
 printf "\n\n"
 kubectl get all
