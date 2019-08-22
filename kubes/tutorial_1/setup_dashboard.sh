@@ -13,3 +13,6 @@ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1
 
 # apply kube proxy
 kubectl proxy
+
+# You should see everything up and running at:
+# http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login
