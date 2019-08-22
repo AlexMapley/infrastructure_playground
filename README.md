@@ -4,6 +4,7 @@ Playground for local kubernetes
 # Requirements
 - docker for mac with kubernetes
 - kubectx (brew)
+- docker-compose
 
 # Setup
 In order to get kubernetes up and running you'll need to go through the following steps:
@@ -21,4 +22,8 @@ The latest stable version should have kubernetes, so you should be all set.
 You may have to enable kubernetes on docker once everything is installed. You should see the following on your local docker:
 
 ![Docker](https://github.com/AlexMapley/local_kubes/blob/master/images/kubes.png)
+
+3. Install docker-compose for mac
+
+A more detailed example can be found [here](https://github.com/Yelp/docker-compose/blob/master/docs/install.md), but we will try to boil this down below to simply the commands that need to be run.
 
