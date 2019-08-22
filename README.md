@@ -18,5 +18,7 @@ The latest stable version should have kubernetes, so you should be all set.
 
 2. Verify Kubes is up and running
 
-You may have to enable kubernetes on docker once everything is installed. You should see 
+You may have to enable kubernetes on docker once everything is installed. You should see the following on your local docker:
+
+![Docker](https://github.com/AlexMapley/local_kubes/blob/master/images/kubes.png)
 
