@@ -27,3 +27,14 @@ You may have to enable kubernetes on docker once everything is installed. You sh
 
 A more detailed example can be found [here](https://github.com/Yelp/docker-compose/blob/master/docs/install.md), but we will try to boil this down below to simply the commands that need to be run.
 
+1. `curl -L https://github.com/docker/compose/releases/download/VERSION_NUM/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose`
+
+OR
+
+1. `pip install -U docker-compose`
+
+2. `chmod +x /usr/local/bin/docker-compose`
+
+3. `docker-compose --version`
+
+With the last command, `docker-compose --version`, you should be able to verify if everything is configured correctly.
