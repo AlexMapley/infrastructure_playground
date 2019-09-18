@@ -1,0 +1,7 @@
+version: "3"
+services:
+  x:
+    image: fedora:28
+    environment:
+      y: b
+    command: echo $y

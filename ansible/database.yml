@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Run database container
+    docker_container:
+      name: 'database'
+      image: 'docker.io/centos/postgresql-96-centos7'
+      state: 'started'
+      env:
+        POSTGRESQL_USER: 'user'
+        POSTGRESQL_PASSWORD: 'password'
+        POSTGRESQL_DATABASE: 'my_db'
+    register: db_cont_metadata
+  - name: Wait for postgres to accept connections
+    wait_for:
+      host: '{{ db_cont_metadata["ansible_facts"]["docker_container"]["NetworkSettings"]["IPAddress"] }}'
+      port: 5432
+      state: drained
+      connect_timeout: 1
+      timeout: 30
+    register: postgres_running
+    until: postgres_running is success
+    retries: 10
+- name: Populate database
+  command: ./manage.py migrate
