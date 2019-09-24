@@ -22,9 +22,9 @@ resource "docker_image" "ubuntu" {
 }
 
 resource "docker_container" "ubuntu" {
-  image = "${docker_image.ubuntu.name}"
+  image    = "${docker_image.ubuntu.name}"
   must_run = true
-  name = "ubuntu_container"
+  name     = "ubuntu_container"
 
   ports {
     external = 2222
