@@ -5,3 +5,5 @@ RUN apk add docker \
 
 COPY ./Dockerfile /Dockerfile
 COPY ./recurse.sh /recurse.sh
+
+RUN chmod +x recurse.sh
